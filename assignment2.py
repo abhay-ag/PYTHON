@@ -37,3 +37,26 @@ avgMarks = calc_average(m1, m2, m3, m4, m5)
 grade = determine_grade(avgMarks)
 
 print(grade, " grade achieved")             #Printing the result
+
+# Program 3
+
+def is_prime(number):                       #Defining the function to check if a number is prime
+    flag = False
+    for i in range (2, number):
+        if (number % i == 0):
+            flag = True
+            break                           #If a number is not prime then the loop breaks here and flag is set to True
+
+    if flag:                                #If flag is true then False is returned else True is returned
+        return False
+    else: 
+        return True
+
+num_check = int(input("Enter the number to be checked if it is prime: "))
+
+res = is_prime(num_check)
+
+if (res):
+    print(num_check, "is Prime.")
+else:
+    print(num_check, "is not Prime")
