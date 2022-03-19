@@ -60,3 +60,36 @@ if (res):
     print(num_check, "is Prime.")
 else:
     print(num_check, "is not Prime")
+
+# Program 4
+
+def check_list(li):                         #Defining the function
+    bigNum = -9999999999                        #Assigning the largest number to smallest value
+    smallNum = 9999999999                       #Assigning the smallest to largest value
+    liSum = 0
+    for i in li:
+        if ( i > bigNum):
+            bigNum = i              #Finding the biggest number
+    
+    for j in li:
+        if ( j < smallNum):
+            smallNum = j            #Finding the smallest number
+    
+    for k in li:
+        liSum += k                  #Finding the sum of the list
+    
+    liAvg = liSum / len(li)         #Finding the average of the list
+
+    return bigNum, smallNum, liSum, liAvg
+
+list_check = []
+for i in range( 0 , 20 ):
+    var = int(input("Enter the number: "))
+    list_check.append(var)
+
+largestNum, smallestNum, sumList, avgList = check_list(list_check)
+
+print("Largest Number in list: ", largestNum)
+print("Smallest Number in list: ", smallestNum)
+print("Sum of Numbers in list: ", sumList)
+print("Average of Numbers in list: ", avgList)
