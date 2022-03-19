@@ -93,3 +93,35 @@ print("Largest Number in list: ", largestNum)
 print("Smallest Number in list: ", smallestNum)
 print("Sum of Numbers in list: ", sumList)
 print("Average of Numbers in list: ", avgList)
+
+# Program 5
+
+def print_all_primes(num):                  # Defining the Function
+    flag = False
+
+    for i in range(2, num):                 #Check if a Number is prime
+        if (num%i == 0):
+            flag = True
+            break
+
+    if flag:                                #If it is prime then return Prime else return Composite
+        return "Composite"
+    else: 
+        return "Prime"
+
+element = 0
+while not(element>1):               #Checking if the number is greater than one
+    element = int(input("Enter a number greater than 1: "))
+
+li_emp = []             #Initializing an empty list
+
+for i in range(2, element + 1):
+    li_emp.append(i)    #Populating the list with elements
+
+for j in li_emp:        #Passing Individual elements of the list to the function
+    res = print_all_primes(j)
+
+    if res == "Prime":
+        print( j, "\b: Prime")
+    else:
+        print( j, "\b: Composite")
