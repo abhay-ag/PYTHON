@@ -2,7 +2,6 @@ userArray = []
 passArray = []
 balance = [0] * 9999
 def start():
-    print("Welcome to the ATM Project\n\n")
     choice = ''
     i = 0
     while choice != 'l' and choice != 'c' and choice != 'q':
@@ -25,7 +24,7 @@ def login():
         start()
     else:
         user = input("\n\nEnter your username: ")
-        if(not(userArray.index(user))):
+        if(not(user in userArray)):
             print("\nNo such user exists! Please register first!!")
         else:
             paswd = input("\nEnter your password: ")
@@ -36,6 +35,14 @@ def login():
 
 
 def createAccount():
-    user = input("\nPlease enter your User Name: ")
+    user = input("\n\nPlease enter your User Name: ")
+    paswd = input("\nPlease enter a Password: ")
 
+    userArray.append(user)
+    passArray.append(paswd)
+    print()
+
+    start()
+
+print("\nWelcome to the ATM Project\n")
 start()
