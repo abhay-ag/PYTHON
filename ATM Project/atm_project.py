@@ -33,7 +33,7 @@ def login():
         else:
             paswd = input("\nEnter your password: ")
             if(paswd == passArray[userArray.index(user)]):
-                print("\n****\tLOGIN SUCCESSFUL\t****")
+                print("\n****LOGIN SUCCESSFUL****")
                 printMainMenu(user)
             else:
                 print("\nWRONG PASSWORD! Please start again")
@@ -41,7 +41,7 @@ def login():
 
 
 def createAccount():
-    user = input("\n\nPlease enter your User Name: ")
+    user = input("\nPlease enter your User Name: ")
     paswd = input("\nPlease enter a Password: ")
 
     userArray.append(user)
@@ -54,13 +54,31 @@ def printMainMenu(username):
     i = 0
     choice = ''
     while choice != 'd' and choice != 'w' and choice != 'r' and choice !='q':
-        choice = input("\n\td -> deposit money\n\tw -> withdraw money\n\tr -> request balance\n\tq -> quit")
+        choice = input("\n\td -> deposit money\n\tw -> withdraw money\n\tr -> request balance\n\tq -> quit\n\n> ")
         if i == 2:
             print("\nInvalid input received too many times exiting ....")
             sleep(2)
             start()
+
+    if choice == 'd':
+        deposit(username)
+    elif choice == 'w':
+        withdraw(username)
     
-    
+def deposit(username):
+    bal = int(input("\nEnter the amount to be deopited: "))
+    balance[userArray.index(username)] += bal
+
+def withdraw(username):
+    if(balance[userArray.index(username)] != 0):
+        print("\nYou have 0 balance! Please deposit some money first.")
+        sleep(1)
+        printMainMenu()
+    else:
+        withMoney = int(input("\nEnter the amount to be withdrawn: "))
+        if(withMoney > balance[userArray.index(username)]):
+            print("\nInsufficient balance in your account!")
+
 
 print("\nWelcome to the ATM Project\n")
 start()
