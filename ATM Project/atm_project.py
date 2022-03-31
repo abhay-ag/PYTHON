@@ -1,3 +1,6 @@
+from time import sleep
+
+
 userArray = []
 passArray = []
 balance = [0] * 9999
@@ -26,12 +29,15 @@ def login():
         user = input("\n\nEnter your username: ")
         if(not(user in userArray)):
             print("\nNo such user exists! Please register first!!")
+            start()
         else:
             paswd = input("\nEnter your password: ")
             if(paswd == passArray[userArray.index(user)]):
                 print("\n****\tLOGIN SUCCESSFUL\t****")
+                printMainMenu(user)
             else:
                 print("\nWRONG PASSWORD! Please start again")
+                start()
 
 
 def createAccount():
@@ -40,9 +46,21 @@ def createAccount():
 
     userArray.append(user)
     passArray.append(paswd)
-    print()
 
     start()
+
+def printMainMenu(username):
+    print("\nWelcome, ",username,"! Please choose from below")
+    i = 0
+    choice = ''
+    while choice != 'd' and choice != 'w' and choice != 'r' and choice !='q':
+        choice = input("\n\td -> deposit money\n\tw -> withdraw money\n\tr -> request balance\n\tq -> quit")
+        if i == 2:
+            print("\nInvalid input received too many times exiting ....")
+            sleep(2)
+            start()
+    
+    
 
 print("\nWelcome to the ATM Project\n")
 start()
