@@ -1,6 +1,5 @@
 from time import sleep
 
-
 userArray = []
 passArray = []
 balance = [0] * 9999
@@ -64,9 +63,15 @@ def printMainMenu(username):
         deposit(username)
     elif choice == 'w':
         withdraw(username)
+    elif choice == 'r':
+        reqBal(username)
+    elif choice == 'q':
+        print("\nThank you, ",username, "! Program exiting ......")
+        sleep(1)
+        start()
     
 def deposit(username):
-    bal = int(input("\nEnter the amount to be deopited: "))
+    bal = int(input("\nEnter the amount to be deopited: $"))
     balance[userArray.index(username)] += bal
     sleep(1)
     print("\nTRANSACTION SUCCESSFUL")
@@ -79,7 +84,7 @@ def withdraw(username):
         sleep(1)
         printMainMenu(username)
     else:
-        withMoney = int(input("\nEnter the amount to be withdrawn: "))
+        withMoney = int(input("\nEnter the amount to be withdrawn: $"))
         if(withMoney > balance[userArray.index(username)]):
                 print("\nInsufficient balance in your account! Please try again!!")
                 sleep(1)
@@ -91,6 +96,10 @@ def withdraw(username):
             sleep(1)
             printMainMenu(username)
 
+def reqBal(username):
+    print("\nDear, ",username, " you have $", balance[userArray.index(username)], " in your account")
+    sleep(1)
+    printMainMenu(username)
 
 
 
