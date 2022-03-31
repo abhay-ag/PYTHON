@@ -7,7 +7,7 @@
     3. Some programs even have problems that I faced and how I overcame that problem.
 ```
 ***
-## `Files Description in Order`
+## `File Descriptions in Order`
 ***
 1. ```basics_python.py```
     * ```5 Different Programs for beginners```
@@ -26,7 +26,7 @@
             * Withdraw Money
             * Request Balance
         4. Steps to run
-            * Clone of Download the code
+            * Clone or Download the code
             * Open in VS Code or any python interpreter
             * Simply run, no other dependencies required
 
