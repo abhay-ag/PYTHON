@@ -68,16 +68,30 @@ def printMainMenu(username):
 def deposit(username):
     bal = int(input("\nEnter the amount to be deopited: "))
     balance[userArray.index(username)] += bal
+    sleep(1)
+    print("\nTRANSACTION SUCCESSFUL")
+    sleep(1)
+    printMainMenu(username)
 
 def withdraw(username):
-    if(balance[userArray.index(username)] != 0):
+    if(balance[userArray.index(username)] == 0):
         print("\nYou have 0 balance! Please deposit some money first.")
         sleep(1)
-        printMainMenu()
+        printMainMenu(username)
     else:
         withMoney = int(input("\nEnter the amount to be withdrawn: "))
         if(withMoney > balance[userArray.index(username)]):
-            print("\nInsufficient balance in your account!")
+                print("\nInsufficient balance in your account! Please try again!!")
+                sleep(1)
+                printMainMenu(username)
+        else:
+            balance[userArray.index(username)] -= withMoney
+            sleep(1)
+            print("\nTRANSACTION SUCCESSFUL")
+            sleep(1)
+            printMainMenu(username)
+
+
 
 
 print("\nWelcome to the ATM Project\n")
