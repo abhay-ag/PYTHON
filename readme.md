@@ -30,7 +30,11 @@
             * Open in VS Code or any python interpreter
             * Simply run, no other dependencies required
 
-
+---
+3. ```programming_problems > lists,strings.py```
+    * ```Basic programs in python for list and string operations```
+        1. List problems and operations
+        2. String operations
 ---
 ## Always open for feedback and suggestions
 #### _Feel free to contact me at avonabhay@gmail.com_
