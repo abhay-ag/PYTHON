@@ -38,3 +38,13 @@ def inList(li, ele):
     else: print("Not found")
 
 inList(li, 3112)
+
+# Program 4 --> Running total of a list
+
+def runningSum(li):
+    sum = 0
+    for i in range(0, len(li)):
+        sum += li[i]
+        print(sum)
+
+runningSum(li)
