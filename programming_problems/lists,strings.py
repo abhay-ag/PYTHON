@@ -10,3 +10,16 @@ def largestList(li):
 li = [1,2,3,34,4,4,4112,222,221,13]
 
 largestList(li)
+
+# Program 2 --> Reverse a list
+
+def revLis(li):
+    for i in range (0, len(li)):
+        for j in range(i+1, len(li)):
+            temp = li[i]
+            li[i] = li[j]
+            li[j] = temp
+        
+    print(li)
+
+revLis(li)
