@@ -48,3 +48,11 @@ def runningSum(li):
         print(sum)
 
 runningSum(li)
+
+# Program 5 --> Elements at odd positions of an array
+
+def oddPosition(li):
+    for i in range(1, len(li), 2):
+        print(li[i], end= ' ')
+
+oddPosition(li)
