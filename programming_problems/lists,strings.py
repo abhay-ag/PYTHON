@@ -66,3 +66,32 @@ def palindrome(str):
     else: print("Not palindrome")
 
 palindrome('nam')
+
+# Program 7 --> sum of array WHILE, FOR, RECURSION
+
+def sumFor (li):
+    sum = 0
+    for i in range(0, len(li)):
+        sum += li[i]
+    
+    print(sum, "FOR LOOP")
+
+def sumWhile(li):
+    sum = 0
+    i = len(li) -1
+    while i >=0:
+        sum += li[i]
+        i -= 1
+    print(sum,"WHILE LOOP")
+
+def sumRec(li , start, end):
+    if (start > end):
+        return 0
+    else:
+        return (li[start] + sumRec(li, start + 1, end))
+    
+
+sumFor(li)
+sumWhile(li)
+sumRecusive = sumRec(li, 0, len(li)-1)
+print(sumRecusive, "RECURSION")
