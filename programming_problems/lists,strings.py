@@ -95,3 +95,10 @@ sumFor(li)
 sumWhile(li)
 sumRecusive = sumRec(li, 0, len(li)-1)
 print(sumRecusive, "RECURSION")
+
+# Program 8 --> concat two lists
+
+def concats(li,li1):
+    print(li + li1)
+
+concats(li, [1,2,2,3,3,5])
