@@ -23,3 +23,18 @@ def revLis(li):
     print(li)
 
 revLis(li)
+
+# Program 3 --> If an element exists in list
+
+def inList(li, ele):
+    flag = False
+    for i in range(0, len(li)):
+        if(ele == li[i]):
+            flag = True
+            break
+
+    if flag:
+        print("Element found")
+    else: print("Not found")
+
+inList(li, 3112)
