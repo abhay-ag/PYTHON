@@ -54,5 +54,15 @@ runningSum(li)
 def oddPosition(li):
     for i in range(1, len(li), 2):
         print(li[i], end= ' ')
+    print()
 
 oddPosition(li)
+
+# Program 6 --> Palindrome string
+
+def palindrome(str):
+    if (str == str[::-1]):
+        print("String is Palindrome")
+    else: print("Not palindrome")
+
+palindrome('nam')
