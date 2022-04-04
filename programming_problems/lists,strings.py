@@ -132,3 +132,16 @@ def mergeSort(arr1, arr2):
     print(resArr)
 
 mergeSort([1,4,6], [2,3,5])
+
+# Program 11 --> Rotate a list
+
+def rotateLi(li,k):
+    rotArray = []
+    for i in range(k, len(li)):
+        rotArray.append(li[i])
+    for j in range(0, k):
+        rotArray.append(li[j])
+    
+    print(rotArray)
+
+rotateLi([1,2,3,4,5,6],3)
