@@ -1,5 +1,8 @@
 # Program 1 --> Find the largest number in a list
 
+from types import resolve_bases
+
+
 def largestList(li):
     bigNum = li[0]
     for i in range (0,len(li)):
@@ -114,3 +117,18 @@ def concatAlt(li, li1):
     print(resLi)
 
 concatAlt(['a','b','c'], [1,2,3])
+
+# Program 10 --> Merge two sorted lists into a new sorted list
+
+def mergeSort(arr1, arr2):
+    resArr = arr1 + arr2
+    bigNum = resArr[0]
+
+    for i in range(0, len(resArr)):
+        for j in range(i+1, len(resArr)):
+            if (resArr[i] > resArr[j]):
+                resArr[i], resArr[j] = resArr[j], resArr[i]
+    
+    print(resArr)
+
+mergeSort([1,4,6], [2,3,5])
