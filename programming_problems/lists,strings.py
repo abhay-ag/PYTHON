@@ -159,7 +159,7 @@ def fib():
         second = third
     print(resli)
 
-fib()
+# fib()
 
 # Program 13 --> Spilt a number into individual digits
 
@@ -174,3 +174,21 @@ def splitNum():
     print(resli)
 
 splitNum()
+
+# Program 14 --> Print a list in a frame
+
+def frameList(li):
+    index = 0 
+    bigLetter = len(li[0])
+    for i in range(0, len(li)):
+        if (len(li[i]) > bigLetter):
+            bigLetter = len(li[i])
+            index = i
+    for i in range(0, len(li)):
+        if(i == 0):
+            print("*"*(len(li[index]) +4))
+        print("*", li[i], " "*(len(li[index]) - len(li[i])), "\b*")
+        if(i == len(li)-1):
+            print("*"*(len(li[index]) +4))
+
+frameList(["Hello", "World", "in", "a", "frame"])
