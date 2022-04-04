@@ -102,3 +102,15 @@ def concats(li,li1):
     print(li + li1)
 
 concats(li, [1,2,2,3,3,5])
+
+# Program 9 --> concat alternate elements
+
+def concatAlt(li, li1):
+    resLi = []
+    for i in range(0, len(li)):
+        resLi.append(li[i])
+        resLi.append(li1[i])
+
+    print(resLi)
+
+concatAlt(['a','b','c'], [1,2,3])
