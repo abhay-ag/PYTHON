@@ -145,3 +145,18 @@ def rotateLi(li,k):
     print(rotArray)
 
 rotateLi([1,2,3,4,5,6],3)
+
+# Program 12 --> Fibonnaci series
+
+def fib():
+    first = 1
+    second = 1
+    resli =[first,second]
+    for i in range(2, 100):
+        third = first + second
+        resli.append(third)
+        first = second
+        second = third
+    print(resli)
+
+fib()
