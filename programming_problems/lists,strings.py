@@ -160,3 +160,17 @@ def fib():
     print(resli)
 
 fib()
+
+# Program 13 --> Spilt a number into individual digits
+
+def splitNum():
+    splitLi = int(input())
+    splitLi = str(splitLi)
+    resli = []
+
+    for i in range (0, len(splitLi)):
+        resli.append(int(splitLi[i]))
+
+    print(resli)
+
+splitNum()
